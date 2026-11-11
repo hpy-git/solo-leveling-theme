@@ -1,0 +1,251 @@
+/* SOLO LEVELING — SHADOW GATE HOTSPOT · tokens.css
+   Palette, type, geometry, light "Awakened" mode and Monarch overrides.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* --- Core surface ----------------------------------------------------- */
+  --void: #04060c;
+  --void-2: #060a12;
+  --void-3: #080e19;
+  --panel: #0a1220;
+  --panel-2: #0c1728;
+  --panel-3: #0e1c30;
+
+  /* --- Ink -------------------------------------------------------------- */
+  --ink: #e8f6ff;
+  --muted: #8fb4cc;
+  --dim: #6e8ea6;
+
+  /* --- System accents --------------------------------------------------- */
+  --cyan: #35e0ff;
+  --cyan-soft: #7ff4ff;
+  --blue: #2b7fff;
+  --blue-deep: #123a5d;
+  --violet: #8b5cf6;
+  --violet-soft: #b69cff;
+  --gold: #f5c451;
+  --red: #ff3b4e;
+  --red-soft: #ff8a95;
+  --green: #34f5a0;
+
+  /* --- Lines and glows -------------------------------------------------- */
+  --line: rgba(53, 224, 255, 0.22);
+  --line-strong: rgba(53, 224, 255, 0.55);
+  --line-soft: rgba(53, 224, 255, 0.1);
+  --glow: rgba(53, 224, 255, 0.45);
+  --glow-soft: rgba(53, 224, 255, 0.16);
+
+  /* --- Panel ------------------------------------------------------------ */
+  --panel-bg: linear-gradient(180deg, rgba(12, 23, 40, 0.97) 0%, rgba(7, 13, 23, 0.99) 100%);
+  --panel-edge: rgba(53, 224, 255, 0.3);
+  --panel-inner: rgba(53, 224, 255, 0.09);
+  --panel-shadow:
+    0 30px 80px -30px rgba(0, 0, 0, 0.92),
+    0 0 60px -22px rgba(53, 224, 255, 0.28);
+
+  /* --- Fields ----------------------------------------------------------- */
+  --field-bg: rgba(3, 8, 16, 0.78);
+  --field-edge: rgba(53, 224, 255, 0.22);
+  --field-ink: #e8f6ff;
+  --field-placeholder: #5f7f97;
+  --field-focus: rgba(53, 224, 255, 0.5);
+  --field-focus-ring: rgba(53, 224, 255, 0.18);
+
+  /* --- Buttons ---------------------------------------------------------- */
+  --btn-bg: linear-gradient(180deg, #7ff4ff 0%, #35e0ff 48%, #2b7fff 100%);
+  --btn-ink: #04121c;
+  --btn-edge: #7ff4ff;
+  --btn-glow: rgba(53, 224, 255, 0.55);
+  --btn-sub-ink: rgba(4, 18, 28, 0.68);
+
+  --ghost-bg: rgba(10, 18, 32, 0.66);
+  --ghost-ink: #b9d9ea;
+  --ghost-edge: rgba(53, 224, 255, 0.22);
+
+  --danger-bg: rgba(255, 59, 78, 0.08);
+  --danger-edge: rgba(255, 59, 78, 0.55);
+  --danger-ink: #ff8a95;
+
+  --ok-bg: rgba(52, 245, 160, 0.08);
+  --ok-edge: rgba(52, 245, 160, 0.5);
+  --ok-ink: #7cffc4;
+
+  /* --- Chips and tables ------------------------------------------------- */
+  --chip-bg: rgba(10, 18, 32, 0.62);
+  --chip-edge: rgba(53, 224, 255, 0.18);
+  --chip-active: rgba(53, 224, 255, 0.12);
+  --tile-bg: rgba(255, 255, 255, 0.035);
+  --tile-edge: rgba(53, 224, 255, 0.14);
+  --divider: rgba(53, 224, 255, 0.14);
+  --scrim: rgba(2, 4, 9, 0.8);
+  --focus-ring: #7ff4ff;
+
+  /* --- Type ------------------------------------------------------------- */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Consolas, "Liberation Mono", monospace;
+
+  /* --- Geometry / motion ------------------------------------------------ */
+  --radius: 4px;
+  --radius-sm: 2px;
+  --radius-pill: 999px;
+  --tap-min: 48px;
+  --page-pad: 16px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 620ms;
+
+  --z-scene: 0;
+  --z-content: 2;
+  --z-dialog: 100;
+  --z-toast: 200;
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT — "AWAKENED" MODE
+   Ice-white system panels, deep navy ink, teal accent for daylight reading.
+   -------------------------------------------------------------------------- */
+
+:root[data-scheme="light"] {
+  color-scheme: light;
+
+  --void: #eaf3f8;
+  --void-2: #f4f8fb;
+  --void-3: #ffffff;
+  --panel: #ffffff;
+  --panel-2: #f0f7fb;
+  --panel-3: #e6f1f7;
+
+  --ink: #071522;
+  --muted: #48657a;
+  --dim: #6b8497;
+
+  --cyan: #007fa8;
+  --cyan-soft: #00a8d6;
+  --blue: #1d5fd6;
+  --blue-deep: #b9d9ea;
+  --violet: #6d28d9;
+  --violet-soft: #8b5cf6;
+  --gold: #a9761f;
+  --red: #c81e3a;
+  --red-soft: #a3122b;
+  --green: #0e8a5f;
+
+  --line: rgba(0, 127, 168, 0.24);
+  --line-strong: rgba(0, 127, 168, 0.55);
+  --line-soft: rgba(0, 127, 168, 0.1);
+  --glow: rgba(0, 127, 168, 0.24);
+  --glow-soft: rgba(0, 127, 168, 0.1);
+
+  --panel-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(240, 247, 251, 0.99) 100%);
+  --panel-edge: rgba(0, 127, 168, 0.3);
+  --panel-inner: rgba(0, 127, 168, 0.07);
+  --panel-shadow:
+    0 30px 70px -30px rgba(7, 21, 34, 0.32),
+    0 0 50px -24px rgba(0, 127, 168, 0.22);
+
+  --field-bg: rgba(255, 255, 255, 0.94);
+  --field-edge: rgba(7, 21, 34, 0.18);
+  --field-ink: #071522;
+  --field-placeholder: #7a92a3;
+  --field-focus: rgba(0, 127, 168, 0.45);
+  --field-focus-ring: rgba(0, 127, 168, 0.14);
+
+  --btn-bg: linear-gradient(180deg, #6fe0ff 0%, #00a8d6 50%, #1d5fd6 100%);
+  --btn-ink: #04121c;
+  --btn-edge: #007fa8;
+  --btn-glow: rgba(0, 127, 168, 0.35);
+  --btn-sub-ink: rgba(4, 18, 28, 0.66);
+
+  --ghost-bg: rgba(255, 255, 255, 0.8);
+  --ghost-ink: #23445c;
+  --ghost-edge: rgba(7, 21, 34, 0.18);
+
+  --danger-bg: rgba(200, 30, 58, 0.07);
+  --danger-edge: rgba(200, 30, 58, 0.45);
+  --danger-ink: #a3122b;
+
+  --ok-bg: rgba(14, 138, 95, 0.09);
+  --ok-edge: rgba(14, 138, 95, 0.45);
+  --ok-ink: #0b6b4a;
+
+  --chip-bg: rgba(255, 255, 255, 0.72);
+  --chip-edge: rgba(7, 21, 34, 0.14);
+  --chip-active: rgba(0, 127, 168, 0.1);
+  --tile-bg: rgba(255, 255, 255, 0.62);
+  --tile-edge: rgba(7, 21, 34, 0.12);
+  --divider: rgba(7, 21, 34, 0.12);
+  --scrim: rgba(7, 21, 34, 0.55);
+  --focus-ring: #007fa8;
+}
+
+/* --------------------------------------------------------------------------
+   MONARCH MODE — violet override (easter egg)
+   -------------------------------------------------------------------------- */
+
+:root[data-monarch="on"] {
+  --cyan: #c4a7ff;
+  --cyan-soft: #e0d0ff;
+  --blue: #8b5cf6;
+  --blue-deep: #2e1065;
+  --violet: #7c3aed;
+  --violet-soft: #d8c4ff;
+  --gold: #f5c451;
+  --line: rgba(196, 167, 255, 0.24);
+  --line-strong: rgba(196, 167, 255, 0.6);
+  --line-soft: rgba(196, 167, 255, 0.1);
+  --glow: rgba(139, 92, 246, 0.5);
+  --glow-soft: rgba(139, 92, 246, 0.16);
+  --panel-edge: rgba(196, 167, 255, 0.35);
+  --panel-inner: rgba(196, 167, 255, 0.1);
+  --panel-shadow:
+    0 30px 80px -30px rgba(0, 0, 0, 0.92),
+    0 0 60px -22px rgba(139, 92, 246, 0.34);
+  --field-edge: rgba(196, 167, 255, 0.26);
+  --field-focus: rgba(196, 167, 255, 0.5);
+  --field-focus-ring: rgba(196, 167, 255, 0.18);
+  --btn-bg: linear-gradient(180deg, #e0d0ff 0%, #b69cff 46%, #7c3aed 100%);
+  --btn-edge: #e0d0ff;
+  --btn-glow: rgba(139, 92, 246, 0.58);
+  --ghost-edge: rgba(196, 167, 255, 0.24);
+  --chip-edge: rgba(196, 167, 255, 0.2);
+  --chip-active: rgba(139, 92, 246, 0.16);
+  --tile-edge: rgba(196, 167, 255, 0.16);
+  --divider: rgba(196, 167, 255, 0.14);
+  --focus-ring: #d8c4ff;
+}
+
+:root[data-scheme="light"][data-monarch="on"] {
+  --cyan: #6d28d9;
+  --cyan-soft: #8b5cf6;
+  --blue: #4c1d95;
+  --violet: #5b21b6;
+  --violet-soft: #7c3aed;
+  --line: rgba(109, 40, 217, 0.24);
+  --line-strong: rgba(109, 40, 217, 0.55);
+  --line-soft: rgba(109, 40, 217, 0.1);
+  --glow: rgba(109, 40, 217, 0.24);
+  --glow-soft: rgba(109, 40, 217, 0.1);
+  --panel-edge: rgba(109, 40, 217, 0.3);
+  --panel-inner: rgba(109, 40, 217, 0.07);
+  --panel-shadow:
+    0 30px 70px -30px rgba(7, 21, 34, 0.32),
+    0 0 50px -24px rgba(109, 40, 217, 0.22);
+  --field-edge: rgba(109, 40, 217, 0.2);
+  --field-focus: rgba(109, 40, 217, 0.42);
+  --field-focus-ring: rgba(109, 40, 217, 0.12);
+  --btn-bg: linear-gradient(180deg, #c4b5fd 0%, #8b5cf6 48%, #5b21b6 100%);
+  --btn-edge: #6d28d9;
+  --btn-glow: rgba(109, 40, 217, 0.34);
+  --ghost-edge: rgba(109, 40, 217, 0.2);
+  --chip-edge: rgba(109, 40, 217, 0.16);
+  --chip-active: rgba(109, 40, 217, 0.1);
+  --tile-edge: rgba(109, 40, 217, 0.12);
+  --divider: rgba(109, 40, 217, 0.12);
+  --focus-ring: #5b21b6;
+}

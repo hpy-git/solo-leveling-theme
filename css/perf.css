@@ -1,0 +1,95 @@
+/* SOLO LEVELING — SHADOW GATE HOTSPOT · perf.css
+   Visual downgrades per device tier. Loaded last so it always wins.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   LITE — cheapest possible render
+   -------------------------------------------------------------------------- */
+
+[data-perf="lite"] .scene__grid,
+[data-perf="lite"] .scene__hunter,
+[data-perf="lite"] .gate__runes,
+[data-perf="lite"] .scene__scan,
+[data-perf="lite"] .scene__spark,
+[data-perf="lite"] .scene__shadow {
+  display: none;
+}
+
+[data-perf="lite"] .gate {
+  opacity: 0.5;
+}
+
+[data-perf="lite"] .gate__core {
+  box-shadow: 0 0 30px var(--glow-soft);
+  opacity: 0.32;
+}
+
+[data-perf="lite"] .sys-window {
+  box-shadow: 0 14px 34px -18px rgba(0, 0, 0, 0.72);
+}
+
+[data-perf="lite"] .sys-window::after {
+  display: none;
+}
+
+[data-perf="lite"] dialog::backdrop {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+[data-perf="lite"] .brand__mark,
+[data-perf="lite"] .rank-card,
+[data-perf="lite"] .toggle,
+[data-perf="lite"] .icon-btn {
+  box-shadow: none;
+}
+
+[data-perf="lite"] [data-toggle-ambient] {
+  display: none;
+}
+
+/* One cheap transition is fine; multi-property transitions are not. */
+[data-perf="lite"] .btn,
+[data-perf="lite"] .field,
+[data-perf="lite"] .tabs__indicator,
+[data-perf="lite"] .toggle,
+[data-perf="lite"] .icon-btn,
+[data-perf="lite"] .rank-card {
+  transition-property: color, background-color, border-color;
+  transition-duration: 110ms;
+}
+
+/* --------------------------------------------------------------------------
+   BALANCED — keep the texture subtle
+   -------------------------------------------------------------------------- */
+
+[data-perf="balanced"] .scene__grid { opacity: 0.38; }
+[data-perf="balanced"] .sys-window::after { opacity: 0.3; }
+[data-perf="balanced"] .scene__hunter { opacity: 0.18; }
+
+/* --------------------------------------------------------------------------
+   RICH — promote only the layers that actually move
+   -------------------------------------------------------------------------- */
+
+[data-perf="rich"] .gate,
+[data-perf="rich"] .scene__scan {
+  will-change: transform;
+}
+
+[data-perf="rich"] .sys-window {
+  backface-visibility: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Environments without backdrop blur
+   -------------------------------------------------------------------------- */
+
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  dialog::backdrop {
+    background: rgba(2, 4, 9, 0.9);
+  }
+
+  :root[data-scheme="light"] dialog::backdrop {
+    background: rgba(7, 21, 34, 0.62);
+  }
+}

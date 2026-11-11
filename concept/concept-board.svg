@@ -1,0 +1,472 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2280" viewBox="0 0 1600 2280" role="img" aria-labelledby="boardTitle boardDesc">
+  <title id="boardTitle">Shadow Gate — Solo Leveling-inspired hotspot concept board</title>
+  <desc id="boardDesc">Visual concept board showing palette, desktop and mobile wireframes, system window components, button states and hunter rank badges.</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#060A12"/>
+      <stop offset="0.55" stop-color="#04060C"/>
+      <stop offset="1" stop-color="#070B14"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8F6FF"/>
+      <stop offset="0.45" stop-color="#7FEFFF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1728"/>
+      <stop offset="1" stop-color="#070D17"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5FF0FF"/>
+      <stop offset="0.5" stop-color="#35E0FF"/>
+      <stop offset="1" stop-color="#2B7FFF"/>
+    </linearGradient>
+    <linearGradient id="btnHoverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7FF4FF"/>
+      <stop offset="0.5" stop-color="#35E0FF"/>
+      <stop offset="1" stop-color="#6D8CFF"/>
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B69CFF"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <radialGradient id="gateGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#35E0FF" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#2B7FFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2B7FFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#10243A" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#35E0FF" opacity="0.05"/>
+    </pattern>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+      .sans { font-family: "Segoe UI", system-ui, Arial, sans-serif; }
+      .label { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px; letter-spacing: 2.4px; fill: #8FB4CC; }
+      .tiny { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 10px; letter-spacing: 1.2px; fill: #6E8EA6; }
+      .panel { fill: url(#panelGrad); stroke: #1C3B57; stroke-width: 1.5; }
+      .cyan { fill: #35E0FF; }
+      .muted { fill: #8FB4CC; }
+      .ink { fill: #E8F6FF; }
+      .glowline { stroke: #35E0FF; stroke-opacity: 0.55; fill: none; }
+      .bracket { stroke: #35E0FF; stroke-width: 2; fill: none; stroke-opacity: 0.9; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="2280" fill="url(#bgGrad)"/>
+  <rect width="1600" height="2280" fill="url(#grid)" opacity="0.5"/>
+  <rect width="1600" height="2280" fill="url(#scan)" opacity="0.35"/>
+
+  <!-- top accent -->
+  <rect x="0" y="0" width="1600" height="3" fill="#35E0FF" opacity="0.8"/>
+  <rect x="0" y="0" width="1600" height="160" fill="url(#gateGlow)" opacity="0.22"/>
+
+  <!-- header -->
+  <g>
+    <text x="60" y="72" class="label">CONCEPT BOARD // V1.0 // AWAITING APPROVAL</text>
+    <text x="58" y="158" class="sans" font-size="82" font-weight="800" letter-spacing="2" fill="url(#titleGrad)">SHADOW GATE</text>
+    <text x="62" y="196" class="mono" font-size="15" letter-spacing="5" fill="#8FB4CC">SOLO LEVELING-INSPIRED HOTSPOT SYSTEM</text>
+    <g transform="translate(1390,74)">
+      <rect x="0" y="0" width="150" height="34" rx="3" fill="#0A1220" stroke="#35E0FF" stroke-opacity="0.5"/>
+      <circle cx="18" cy="17" r="4" fill="#34F5A0"/>
+      <text x="32" y="21" class="tiny" fill="#34F5A0">SYSTEM ONLINE</text>
+    </g>
+  </g>
+
+  <!-- palette -->
+  <g>
+    <text x="60" y="268" class="label">01 // SYSTEM PALETTE</text>
+    <g transform="translate(60,290)">
+      <g>
+        <rect width="236" height="96" rx="3" fill="#04060C" stroke="#1C3B57"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#E8F6FF">ABYSS</text>
+        <text x="14" y="60" class="tiny">#04060C</text>
+        <text x="14" y="82" class="tiny">BASE / VOID</text>
+      </g>
+      <g transform="translate(250,0)">
+        <rect width="236" height="96" rx="3" fill="#0A1220" stroke="#1C3B57"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#E8F6FF">SYSTEM PANEL</text>
+        <text x="14" y="60" class="tiny">#0A1220</text>
+        <text x="14" y="82" class="tiny">WINDOW SURFACE</text>
+      </g>
+      <g transform="translate(500,0)">
+        <rect width="236" height="96" rx="3" fill="#35E0FF"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#04060C">SYSTEM CYAN</text>
+        <text x="14" y="60" class="tiny" fill="#06303A">#35E0FF</text>
+        <text x="14" y="82" class="tiny" fill="#06303A">PRIMARY ACCENT</text>
+      </g>
+      <g transform="translate(750,0)">
+        <rect width="236" height="96" rx="3" fill="#2B7FFF"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#E8F6FF">MANA BLUE</text>
+        <text x="14" y="60" class="tiny" fill="#D6E6FF">#2B7FFF</text>
+        <text x="14" y="82" class="tiny" fill="#D6E6FF">MIDTONE / GLOW</text>
+      </g>
+      <g transform="translate(1000,0)">
+        <rect width="236" height="96" rx="3" fill="#8B5CF6"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#FFFFFF">MONARCH VIOLET</text>
+        <text x="14" y="60" class="tiny" fill="#EDE4FF">#8B5CF6</text>
+        <text x="14" y="82" class="tiny" fill="#EDE4FF">SECONDARY / EGG</text>
+      </g>
+      <g transform="translate(1250,0)">
+        <rect width="236" height="96" rx="3" fill="#F5C451"/>
+        <text x="14" y="40" class="mono" font-size="13" fill="#2B1B05">RULER GOLD</text>
+        <text x="14" y="60" class="tiny" fill="#4A3208">#F5C451</text>
+        <text x="14" y="82" class="tiny" fill="#4A3208">S-RANK / REWARD</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- desktop wireframe -->
+  <g>
+    <text x="60" y="444" class="label">02 // DESKTOP LAYOUT — ASYMMETRIC GATE + SYSTEM WINDOW</text>
+    <rect x="60" y="464" width="900" height="520" rx="4" fill="#070D17" stroke="#1C3B57" stroke-width="1.5"/>
+
+    <!-- top bar -->
+    <rect x="60" y="464" width="900" height="42" fill="#0A1220" stroke="#1C3B57"/>
+    <g transform="translate(80,481)">
+      <path d="M0 8 L8 0 L16 8 L8 16 Z" fill="none" stroke="#35E0FF" stroke-width="1.6"/>
+      <path d="M8 3 L8 13 M3 8 L13 8" stroke="#35E0FF" stroke-width="1"/>
+      <text x="26" y="12" class="mono" font-size="12" letter-spacing="3" fill="#E8F6FF">SHADOW GATE</text>
+    </g>
+    <text x="470" y="490" class="tiny" text-anchor="middle" fill="#6E8EA6">HUNTER NETWORK // mTikOps</text>
+    <g transform="translate(860,480)">
+      <circle cx="5" cy="5" r="3.5" fill="#34F5A0"/>
+      <text x="15" y="9" class="tiny" fill="#34F5A0">ONLINE</text>
+    </g>
+
+    <!-- gate scene -->
+    <g>
+      <rect x="60" y="506" width="520" height="478" fill="#04060C"/>
+      <rect x="60" y="506" width="520" height="478" fill="url(#gateGlow)" opacity="0.35"/>
+      <circle cx="320" cy="700" r="190" fill="none" stroke="#35E0FF" stroke-opacity="0.10" stroke-width="1"/>
+      <circle cx="320" cy="700" r="150" fill="none" stroke="#35E0FF" stroke-opacity="0.22" stroke-width="1.2" stroke-dasharray="4 10"/>
+      <circle cx="320" cy="700" r="112" fill="none" stroke="#2B7FFF" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle cx="320" cy="700" r="76" fill="none" stroke="#35E0FF" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="2 6"/>
+      <circle cx="320" cy="700" r="42" fill="none" stroke="#8B5CF6" stroke-opacity="0.6" stroke-width="1.5"/>
+      <circle cx="320" cy="700" r="20" fill="#35E0FF" opacity="0.15" filter="url(#strongGlow)"/>
+      <circle cx="320" cy="700" r="5" fill="#E8F6FF" filter="url(#softGlow)"/>
+
+      <!-- hooded silhouette -->
+      <g transform="translate(320,830)" opacity="0.9">
+        <path d="M-58 60 C-54 18 -34 -8 -16 -20 C-8 -25 8 -25 16 -20 C34 -8 54 18 58 60 L36 60 C32 30 22 18 0 18 C-22 18 -32 30 -36 60 Z" fill="#02040A" stroke="#35E0FF" stroke-opacity="0.22" stroke-width="1"/>
+        <path d="M-30 60 C-26 34 -18 26 0 26 C18 26 26 34 30 60" fill="#050B14" stroke="#2B7FFF" stroke-opacity="0.25"/>
+        <circle cx="-10" cy="4" r="2.4" fill="#35E0FF" filter="url(#softGlow)"/>
+        <circle cx="10" cy="4" r="2.4" fill="#35E0FF" filter="url(#softGlow)"/>
+      </g>
+
+      <text x="96" y="610" class="sans" font-size="64" font-weight="800" letter-spacing="8" fill="#E8F6FF" opacity="0.10">SHADOW</text>
+      <text x="96" y="670" class="sans" font-size="64" font-weight="800" letter-spacing="8" fill="#E8F6FF" opacity="0.10">GATE</text>
+
+      <!-- ticker -->
+      <rect x="60" y="946" width="520" height="38" fill="#070D17" stroke="#1C3B57"/>
+      <text x="80" y="970" class="tiny" fill="#35E0FF">GATE RANK: A</text>
+      <text x="190" y="970" class="tiny">// MANA DENSITY: 98%</text>
+      <text x="380" y="970" class="tiny">// AWAITING HUNTER</text>
+    </g>
+
+    <!-- system window -->
+    <g>
+      <rect x="600" y="528" width="340" height="424" rx="3" class="panel"/>
+      <rect x="600" y="528" width="340" height="36" fill="#0E1C30" stroke="#1C3B57"/>
+      <text x="616" y="551" class="tiny" fill="#35E0FF">SYSTEM // AUTHENTICATION</text>
+      <circle cx="916" cy="546" r="3" fill="#FF3B4E"/>
+      <circle cx="904" cy="546" r="3" fill="#F5C451"/>
+      <circle cx="892" cy="546" r="3" fill="#34F5A0"/>
+
+      <!-- corner brackets -->
+      <path d="M606 534 h16 M606 534 v16" class="bracket"/>
+      <path d="M934 534 h-16 M934 534 v16" class="bracket"/>
+      <path d="M606 946 h16 M606 946 v-16" class="bracket"/>
+      <path d="M934 946 h-16 M934 946 v-16" class="bracket"/>
+
+      <text x="620" y="590" class="tiny" fill="#8B5CF6">NOTIFICATION</text>
+      <text x="620" y="618" class="sans" font-size="21" font-weight="700" fill="#E8F6FF">Welcome, Hunter.</text>
+      <text x="620" y="640" class="tiny">THE SYSTEM HAS DETECTED YOUR PRESENCE.</text>
+
+      <!-- tabs -->
+      <rect x="620" y="660" width="300" height="34" rx="2" fill="#070D17" stroke="#1C3B57"/>
+      <rect x="622" y="662" width="147" height="30" rx="2" fill="#12283E" stroke="#35E0FF" stroke-opacity="0.6"/>
+      <text x="695" y="682" class="tiny" text-anchor="middle" fill="#E8F6FF">GATE KEY</text>
+      <text x="847" y="682" class="tiny" text-anchor="middle" fill="#6E8EA6">HUNTER ID</text>
+
+      <!-- field -->
+      <rect x="620" y="710" width="300" height="46" rx="2" fill="#050B14" stroke="#1C3B57"/>
+      <text x="636" y="738" class="tiny" fill="#6E8EA6">ENTER ACCESS CODE…</text>
+      <rect x="620" y="710" width="3" height="46" fill="#35E0FF"/>
+
+      <!-- primary button -->
+      <rect x="620" y="772" width="300" height="54" rx="2" fill="url(#btnGrad)" stroke="#7FF4FF" filter="url(#softGlow)"/>
+      <text x="770" y="796" class="mono" font-size="14" font-weight="700" letter-spacing="4" text-anchor="middle" fill="#04121C">ARISE</text>
+      <text x="770" y="812" class="tiny" text-anchor="middle" fill="#06303A">CONNECT TO THE NETWORK</text>
+
+      <!-- secondary -->
+      <rect x="620" y="836" width="146" height="40" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="693" y="861" class="tiny" text-anchor="middle" fill="#8FB4CC">QUEST BOARD</text>
+      <rect x="774" y="836" width="146" height="40" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="847" y="861" class="tiny" text-anchor="middle" fill="#8FB4CC">DAILY QUEST</text>
+
+      <text x="620" y="906" class="tiny">SYSTEM v2.0 // mTikOps</text>
+      <rect x="850" y="890" width="70" height="24" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="885" y="906" class="tiny" text-anchor="middle" fill="#8FB4CC">SFX ⏻</text>
+    </g>
+  </g>
+
+  <!-- mobile wireframe -->
+  <g>
+    <text x="1040" y="444" class="label">MOBILE // 390</text>
+    <rect x="1040" y="464" width="300" height="620" rx="18" fill="#070D17" stroke="#1C3B57" stroke-width="2"/>
+    <rect x="1054" y="478" width="272" height="592" rx="10" fill="#04060C"/>
+
+    <!-- mobile gate bg -->
+    <rect x="1054" y="478" width="272" height="592" rx="10" fill="url(#gateGlow)" opacity="0.30"/>
+    <circle cx="1190" cy="700" r="130" fill="none" stroke="#35E0FF" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="4 10"/>
+    <circle cx="1190" cy="700" r="88" fill="none" stroke="#2B7FFF" stroke-opacity="0.30" stroke-width="1.2"/>
+
+    <!-- mobile top bar -->
+    <text x="1070" y="512" class="mono" font-size="10" letter-spacing="2" fill="#E8F6FF">◈ SHADOW GATE</text>
+    <circle cx="1298" cy="508" r="3" fill="#34F5A0"/>
+    <text x="1306" y="512" class="tiny" font-size="8" fill="#34F5A0">ON</text>
+
+    <!-- mobile panel -->
+    <rect x="1068" y="536" width="244" height="470" rx="2" class="panel"/>
+    <rect x="1068" y="536" width="244" height="30" fill="#0E1C30" stroke="#1C3B57"/>
+    <text x="1080" y="556" class="tiny" font-size="8" fill="#35E0FF">SYSTEM // AUTH</text>
+    <path d="M1074 542 h10 M1074 542 v10" class="bracket" stroke-width="1.5"/>
+    <path d="M1306 542 h-10 M1306 542 v10" class="bracket" stroke-width="1.5"/>
+
+    <text x="1082" y="596" class="tiny" font-size="8" fill="#8B5CF6">NOTIFICATION</text>
+    <text x="1082" y="620" class="sans" font-size="17" font-weight="700" fill="#E8F6FF">Welcome, Hunter.</text>
+    <text x="1082" y="638" class="tiny" font-size="7">THE SYSTEM HAS DETECTED YOU.</text>
+
+    <!-- mobile tabs -->
+    <rect x="1082" y="654" width="216" height="30" rx="2" fill="#070D17" stroke="#1C3B57"/>
+    <rect x="1084" y="656" width="106" height="26" rx="2" fill="#12283E" stroke="#35E0FF" stroke-opacity="0.6"/>
+    <text x="1137" y="673" class="tiny" font-size="7" text-anchor="middle" fill="#E8F6FF">GATE KEY</text>
+    <text x="1243" y="673" class="tiny" font-size="7" text-anchor="middle" fill="#6E8EA6">HUNTER ID</text>
+
+    <!-- mobile field -->
+    <rect x="1082" y="698" width="216" height="44" rx="2" fill="#050B14" stroke="#1C3B57"/>
+    <text x="1096" y="724" class="tiny" font-size="7" fill="#6E8EA6">ENTER ACCESS CODE…</text>
+    <rect x="1082" y="698" width="3" height="44" fill="#35E0FF"/>
+
+    <!-- mobile primary -->
+    <rect x="1082" y="756" width="216" height="50" rx="2" fill="url(#btnGrad)" stroke="#7FF4FF" filter="url(#softGlow)"/>
+    <text x="1190" y="779" class="mono" font-size="12" font-weight="700" letter-spacing="3" text-anchor="middle" fill="#04121C">ARISE</text>
+    <text x="1190" y="794" class="tiny" font-size="6" text-anchor="middle" fill="#06303A">CONNECT TO THE NETWORK</text>
+
+    <!-- mobile secondary -->
+    <rect x="1082" y="818" width="105" height="36" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+    <text x="1134" y="840" class="tiny" font-size="7" text-anchor="middle" fill="#8FB4CC">QUEST BOARD</text>
+    <rect x="1193" y="818" width="105" height="36" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+    <text x="1245" y="840" class="tiny" font-size="7" text-anchor="middle" fill="#8FB4CC">DAILY QUEST</text>
+
+    <text x="1082" y="884" class="tiny" font-size="7">SYSTEM v2.0 // mTikOps</text>
+    <rect x="1246" y="870" width="52" height="20" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+    <text x="1272" y="884" class="tiny" font-size="7" text-anchor="middle" fill="#8FB4CC">SFX ⏻</text>
+
+    <!-- bottom sheet hint -->
+    <rect x="1068" y="956" width="244" height="96" rx="4" fill="#0C1728" stroke="#35E0FF" stroke-opacity="0.35"/>
+    <rect x="1168" y="966" width="44" height="4" rx="2" fill="#35E0FF" opacity="0.5"/>
+    <text x="1084" y="992" class="tiny" font-size="8" fill="#35E0FF">QUEST BOARD // BOTTOM SHEET</text>
+    <rect x="1084" y="1004" width="212" height="14" rx="2" fill="#12283E"/>
+    <rect x="1084" y="1024" width="160" height="10" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+  </g>
+
+  <!-- component detail -->
+  <g>
+    <text x="60" y="1116" class="label">03 // SYSTEM WINDOW COMPONENTS</text>
+
+    <!-- component panel -->
+    <rect x="60" y="1138" width="560" height="420" rx="3" class="panel"/>
+    <rect x="60" y="1138" width="560" height="38" fill="#0E1C30" stroke="#1C3B57"/>
+    <text x="78" y="1162" class="tiny" fill="#35E0FF">SYSTEM // COMPONENT SPECIMEN</text>
+    <path d="M66 1144 h18 M66 1144 v18" class="bracket"/>
+    <path d="M614 1144 h-18 M614 1144 v18" class="bracket"/>
+    <path d="M66 1552 h18 M66 1552 v-18" class="bracket"/>
+    <path d="M614 1552 h-18 M614 1552 v-18" class="bracket"/>
+
+    <text x="80" y="1210" class="tiny" fill="#8B5CF6">NOTIFICATION</text>
+    <text x="80" y="1246" class="sans" font-size="30" font-weight="700" fill="#E8F6FF">Welcome, Hunter.</text>
+    <text x="80" y="1274" class="tiny">AUTHENTICATE TO ENTER THE GATE.</text>
+
+    <!-- tabs -->
+    <rect x="80" y="1300" width="520" height="42" rx="2" fill="#070D17" stroke="#1C3B57"/>
+    <rect x="82" y="1302" width="258" height="38" rx="2" fill="#12283E" stroke="#35E0FF" stroke-opacity="0.65"/>
+    <text x="211" y="1327" class="tiny" text-anchor="middle" fill="#E8F6FF">GATE KEY</text>
+    <text x="470" y="1327" class="tiny" text-anchor="middle" fill="#6E8EA6">HUNTER ID</text>
+
+    <!-- field -->
+    <rect x="80" y="1362" width="520" height="52" rx="2" fill="#050B14" stroke="#35E0FF" stroke-opacity="0.55"/>
+    <rect x="80" y="1362" width="3" height="52" fill="#35E0FF"/>
+    <text x="100" y="1394" class="mono" font-size="13" fill="#E8F6FF">SHDW-7A4F-9K2</text>
+    <rect x="548" y="1378" width="36" height="20" rx="2" fill="#12283E"/>
+    <text x="566" y="1392" class="tiny" font-size="8" text-anchor="middle" fill="#35E0FF">SHOW</text>
+
+    <!-- primary button -->
+    <rect x="80" y="1432" width="520" height="58" rx="2" fill="url(#btnGrad)" stroke="#7FF4FF" filter="url(#softGlow)"/>
+    <text x="340" y="1457" class="mono" font-size="16" font-weight="700" letter-spacing="5" text-anchor="middle" fill="#04121C">ARISE</text>
+    <text x="340" y="1476" class="tiny" text-anchor="middle" fill="#06303A">CONNECT TO THE NETWORK</text>
+
+    <!-- secondary row -->
+    <rect x="80" y="1502" width="254" height="42" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+    <text x="207" y="1528" class="tiny" text-anchor="middle" fill="#8FB4CC">QUEST BOARD</text>
+    <rect x="346" y="1502" width="254" height="42" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+    <text x="473" y="1528" class="tiny" text-anchor="middle" fill="#8FB4CC">DAILY QUEST</text>
+
+    <!-- button states -->
+    <text x="660" y="1180" class="label">BUTTON STATES</text>
+    <g transform="translate(660,1200)">
+      <!-- default -->
+      <rect width="420" height="56" rx="2" fill="url(#btnGrad)" stroke="#7FF4FF"/>
+      <text x="18" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="4" fill="#04121C">ARISE</text>
+      <text x="18" y="42" class="tiny" fill="#06303A">DEFAULT</text>
+      <text x="398" y="34" class="tiny" text-anchor="end" fill="#06303A">01</text>
+
+      <!-- hover -->
+      <g transform="translate(0,70)">
+        <rect width="420" height="56" rx="2" fill="url(#btnHoverGrad)" stroke="#B8F8FF" filter="url(#softGlow)"/>
+        <text x="18" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="4" fill="#04121C">ARISE</text>
+        <text x="18" y="42" class="tiny" fill="#06303A">HOVER / ENERGY SWEEP</text>
+        <text x="398" y="34" class="tiny" text-anchor="end" fill="#06303A">02</text>
+      </g>
+
+      <!-- pressed -->
+      <g transform="translate(0,140)">
+        <rect width="420" height="56" rx="2" fill="#1FA8C4" stroke="#35E0FF"/>
+        <text x="18" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="4" fill="#04121C">ARISE</text>
+        <text x="18" y="42" class="tiny" fill="#06303A">PRESSED / SCALE 0.985</text>
+        <text x="398" y="34" class="tiny" text-anchor="end" fill="#06303A">03</text>
+      </g>
+
+      <!-- loading -->
+      <g transform="translate(0,210)">
+        <rect width="420" height="56" rx="2" fill="#0A1220" stroke="#35E0FF" stroke-opacity="0.6"/>
+        <circle cx="28" cy="28" r="10" fill="none" stroke="#35E0FF" stroke-width="2" stroke-dasharray="18 10"/>
+        <text x="52" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="3" fill="#E8F6FF">CONNECTING…</text>
+        <text x="52" y="42" class="tiny" fill="#8FB4CC">LOADING / RUNE SPINNER</text>
+        <text x="398" y="34" class="tiny" text-anchor="end" fill="#35E0FF">04</text>
+      </g>
+
+      <!-- ghost -->
+      <g transform="translate(0,280)">
+        <rect width="420" height="56" rx="2" fill="#0A1220" stroke="#1C3B57"/>
+        <text x="18" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="3" fill="#8FB4CC">QUEST BOARD</text>
+        <text x="18" y="42" class="tiny" fill="#6E8EA6">GHOST / SECONDARY</text>
+        <text x="398" y="34" class="tiny" text-anchor="end" fill="#6E8EA6">05</text>
+      </g>
+
+      <!-- danger -->
+      <g transform="translate(0,350)">
+        <rect width="420" height="56" rx="2" fill="#1A0A10" stroke="#FF3B4E" stroke-opacity="0.75"/>
+        <text x="18" y="26" class="mono" font-size="12" font-weight="700" letter-spacing="3" fill="#FF8A95">LEAVE GATE</text>
+        <text x="18" y="42" class="tiny" fill="#B86A72">DANGER / LOGOUT</text>
+        <text x="398" y="34" class="tiny" text-anchor="end" fill="#FF3B4E">06</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ranks -->
+  <g>
+    <text x="60" y="1636" class="label">04 // HUNTER RANKS — PLAN BADGES</text>
+    <g transform="translate(60,1660)">
+      <!-- E -->
+      <g>
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#0A1220" stroke="#6E8EA6" stroke-width="1.5"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#8FB4CC">E</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle">DAY PASS</text>
+      </g>
+      <g transform="translate(120,0)">
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#0A1220" stroke="#34F5A0" stroke-width="1.5"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#34F5A0">D</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle">WEEK</text>
+      </g>
+      <g transform="translate(240,0)">
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#0A1220" stroke="#35E0FF" stroke-width="1.5"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#35E0FF">C</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle">COMBO</text>
+      </g>
+      <g transform="translate(360,0)">
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#0A1220" stroke="#2B7FFF" stroke-width="1.5"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#6D8CFF">B</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle">MONTH</text>
+      </g>
+      <g transform="translate(480,0)">
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#0A1220" stroke="#8B5CF6" stroke-width="1.5"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#B69CFF">A</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle">PLUS / PRO</text>
+      </g>
+      <g transform="translate(600,0)">
+        <path d="M0 34 L34 0 L68 34 L34 68 Z" fill="#1A1408" stroke="#F5C451" stroke-width="1.8" filter="url(#softGlow)"/>
+        <text x="34" y="42" class="sans" font-size="22" font-weight="800" text-anchor="middle" fill="#F5C451">S</text>
+        <text x="34" y="88" class="tiny" text-anchor="middle" fill="#F5C451">MAX / PRIME</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- motion + performance notes -->
+  <g>
+    <text x="60" y="1800" class="label">05 // MOTION &amp; PERFORMANCE TIERS</text>
+    <g transform="translate(60,1824)">
+      <rect width="460" height="150" rx="3" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="18" y="30" class="mono" font-size="13" fill="#34F5A0">LITE</text>
+      <text x="18" y="54" class="tiny">STATIC GRADIENTS · NO LOOPS · NO BLUR</text>
+      <text x="18" y="74" class="tiny">NO TILT · NO RIPPLE · INSTANT TRANSITIONS</text>
+      <text x="18" y="94" class="tiny">≤ 2 CORES / ≤ 2GB RAM / SAVE-DATA / 2G</text>
+      <text x="18" y="120" class="tiny" fill="#34F5A0">LOGIN REMAINS FULLY USABLE</text>
+    </g>
+    <g transform="translate(540,1824)">
+      <rect width="460" height="150" rx="3" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="18" y="30" class="mono" font-size="13" fill="#35E0FF">BALANCED</text>
+      <text x="18" y="54" class="tiny">CSS TRANSFORM LOOPS · ENTRANCE · SHINE</text>
+      <text x="18" y="74" class="tiny">RIPPLE · SLIDE-UP SHEETS · PAUSED WHEN HIDDEN</text>
+      <text x="18" y="94" class="tiny">DEFAULT FOR MOST PHONES &amp; MID-RANGE</text>
+      <text x="18" y="120" class="tiny" fill="#35E0FF">SMOOTH WITHOUT GPU STRAIN</text>
+    </g>
+    <g transform="translate(1020,1824)">
+      <rect width="520" height="150" rx="3" fill="#0A1220" stroke="#1C3B57"/>
+      <text x="18" y="30" class="mono" font-size="13" fill="#B69CFF">RICH</text>
+      <text x="18" y="54" class="tiny">PARALLAX TILT · LAYERED GATE · RUNES · SPARKLES</text>
+      <text x="18" y="74" class="tiny">HOLOGRAPHIC SHEEN · EMBLEM PULSE</text>
+      <text x="18" y="94" class="tiny">≥ 6 CORES · ≥ 6GB RAM · FINE POINTER · ≥ 768PX</text>
+      <text x="18" y="120" class="tiny" fill="#B69CFF">DESKTOP CINEMATIC MODE</text>
+    </g>
+  </g>
+
+  <!-- notes -->
+  <g>
+    <text x="60" y="2030" class="label">06 // DELIVERY NOTES</text>
+    <text x="60" y="2060" class="tiny" font-size="11">• 100% LOCAL ASSETS — NO WEB FONTS, CDNs, OR REMOTE IMAGES. CAPTIVE PORTALS OFTEN HAVE NO INTERNET BEFORE LOGIN.</text>
+    <text x="60" y="2082" class="tiny" font-size="11">• ALL MIKROTIK VARIABLES, CHAP, TRIAL, STATUS, LOGOUT, ADVERT, REDIRECT AND WISPR XML FLOWS PRESERVED.</text>
+    <text x="60" y="2104" class="tiny" font-size="11">• ORIGINAL VECTOR ART AND SYNTHESIZED SFX — NO COPYRIGHTED CHARACTER ART OR OST AUDIO.</text>
+    <text x="60" y="2126" class="tiny" font-size="11">• JS-DISABLED LOGIN STILL POSTS. DIALOGS FALL BACK. REDUCED-MOTION AND FORCED-COLORS SUPPORTED.</text>
+    <text x="60" y="2148" class="tiny" font-size="11">• TARGET: FIRST MEANINGFUL PAINT &lt; 500MS ON ROUTER LAN · &lt; 1.5S ON THROTTLED 3G.</text>
+  </g>
+
+  <!-- footer -->
+  <rect x="60" y="2190" width="1480" height="1" fill="#1C3B57"/>
+  <text x="60" y="2224" class="tiny" fill="#6E8EA6">SHADOW GATE // CONCEPT BOARD // BUILT ON THE ONE-PIECE-THEME PERFORMANCE ARCHITECTURE</text>
+  <text x="1540" y="2224" class="tiny" text-anchor="end" fill="#35E0FF">AWAITING APPROVAL</text>
+</svg>

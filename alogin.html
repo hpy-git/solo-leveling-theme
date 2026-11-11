@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-perf="balanced">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#04060c">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="-1">
+  <title id="title">Shadow Gate &rsaquo; System Online</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/perf.css">
+  <script src="js/perf-tier.js"></script>
+  <script src="js/theme-mode.js"></script>
+  <script src="js/theme-motion.js" defer></script>
+  <script src="js/theme-sounds.js" defer></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
+  function restoreTawkChat() {
+      if (typeof Tawk_API.showWidget === 'function') {
+          Tawk_API.showWidget();
+      }
+  }
+
+  Tawk_API.onLoad = restoreTawkChat;
+  Tawk_API.onChatHidden = restoreTawkChat;
+  Tawk_API.onChatMinimized = restoreTawkChat;
+  Tawk_API.onChatClosed = restoreTawkChat;
+
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69ac11c70c100a1c36455660/1k6f5rbon';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+
+  window.addEventListener('pageshow', restoreTawkChat);
+  document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) restoreTawkChat();
+  });
+  </script>
+  <!--End of Tawk.to Script-->
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__veil"></div>
+  <div class="scene__grid"></div>
+  <div class="scene__gate">
+    <div class="gate">
+      <span class="gate__ring gate__ring--1"></span>
+      <span class="gate__ring gate__ring--2"></span>
+      <span class="gate__ring gate__ring--3"></span>
+      <span class="gate__ring gate__ring--4"></span>
+      <span class="gate__ring gate__ring--5"></span>
+      <span class="gate__runes"></span>
+      <span class="gate__core"></span>
+    </div>
+  </div>
+  <div class="scene__hunter"></div>
+  <div class="scene__scan"></div>
+  <div class="scene__sparks">
+    <span class="scene__spark" style="left:14%;--s:1"></span>
+    <span class="scene__spark" style="left:31%;--s:3"></span>
+    <span class="scene__spark" style="left:57%;--s:2"></span>
+    <span class="scene__spark" style="left:76%;--s:0"></span>
+    <span class="scene__spark" style="left:88%;--s:4"></span>
+  </div>
+  <div class="scene__shadows">
+    <span class="scene__shadow" style="left:22%;--s:0"></span>
+    <span class="scene__shadow" style="left:56%;--s:2"></span>
+    <span class="scene__shadow" style="left:82%;--s:1"></span>
+  </div>
+</div>
+
+<main class="portal portal--center">
+  <div class="stage stage--center">
+    <header class="topbar">
+      <div class="brand">
+        <button class="brand__mark" type="button" id="monarchTrigger"
+                aria-label="Shadow Gate sigil. Tap five times to unlock Monarch Mode.">
+          <img src="img/system-sigil.svg" width="34" height="34" alt="">
+        </button>
+        <div class="brand__text">
+          <span class="brand__name">SHADOW GATE</span>
+          <span class="brand__sub">HUNTER NETWORK // ONLINE</span>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__status">
+          <i class="status-dot" aria-hidden="true"></i>
+          <span class="status-text">SYSTEM ONLINE</span>
+        </span>
+      </div>
+    </header>
+
+    <section class="sys-window" aria-labelledby="alogin-title">
+      <div class="sys-bar">
+        <span class="sys-bar__title"><i class="sys-bar__dot" aria-hidden="true"></i>System // Connection Confirmed</span>
+        <span class="sys-bar__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="sys-body">
+        <div class="outcome reveal">
+          <span class="outcome__seal outcome__seal--ok">
+            <svg width="76" height="76" viewBox="0 0 88 88" role="img" aria-label="Connected">
+              <circle cx="44" cy="44" r="42" fill="rgba(52,245,160,.12)"></circle>
+              <circle cx="44" cy="44" r="42" fill="none" stroke="var(--ok-edge)" stroke-width="2" stroke-opacity=".55"></circle>
+              <path class="check-path" d="M27 45.5l11 11 23-24" fill="none" stroke="var(--ok-edge)" stroke-width="6"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+
+          <span class="level-tag">Gate Open // Stable</span>
+          <p class="eyebrow">Connection confirmed</p>
+          <h1 class="sys-title title--sm" id="alogin-title"><span class="title__fill">You are online</span></h1>
+          $(if login-by != 'mac')
+          <p class="sys-sub">Welcome, Hunter <strong>$(username)</strong>.</p>
+          $(endif)
+          $(if login-by == 'mac')
+          <p class="sys-sub">Your internet connection is now active.</p>
+          $(endif)
+
+          <div class="transfer" role="presentation">
+            <span class="transfer__bar"></span>
+          </div>
+          <p class="transfer__label">
+            <span>Channel stable</span>
+            <span>100%</span>
+          </p>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="$(link-status)" id="continueBtn">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 16 16 12 12 8"></polyline>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+              <span data-label>Check Status</span>
+            </a>
+          </div>
+        </div>
+
+        <footer class="footer reveal" style="--i:3">
+          <strong>SHADOW GATE</strong> &middot; mTikOps<br>
+          <span>SYSTEM v2.0 // &copy; 2023&ndash;2026</span>
+          <div class="toggle-row">
+            <button class="toggle" type="button" data-toggle-theme aria-pressed="false" aria-label="Switch to Awakened light mode">
+              <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+              </svg>
+              <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.8A8.5 8.5 0 1111.2 3a6.5 6.5 0 009.8 9.8z"></path>
+              </svg>
+              <span data-label>System</span>
+            </button>
+            <button class="toggle" type="button" data-toggle-sfx aria-pressed="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10v4h3l4 3V7L7 10z"></path>
+                <path d="M16 9a4 4 0 010 6"></path>
+              </svg>
+              <span data-label>SFX ON</span>
+            </button>
+            <button class="toggle" type="button" data-toggle-ambient aria-pressed="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M3 12h2l2-5 3 10 3-13 3 15 2 7h3"></path>
+              </svg>
+              <span data-label>MANA ON</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+
+      <div class="sys-foot">
+        <span>GATE 07 // OPEN</span>
+        <span>UPLINK SECURED</span>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script type="text/javascript">
+  (function () {
+    'use strict';
+
+    document.title = "$(hostname) > success";
+
+    function cleanUrl(value) {
+      value = String(value || '').replace(/^\s+|\s+$/g, '');
+      if (!value || value === 'null' || value === 'undefined') return '';
+      // Reject a macro that RouterOS did not substitute.
+      if (value.indexOf('$(') !== -1) return '';
+      return value;
+    }
+
+    // Do NOT navigate automatically. The iOS/Android captive-portal assistant
+    // treats a redirect away from the portal page as a dropped connection and
+    // shows "Hotspot login cannot open the page because the network connection
+    // was lost". Leaving this page settled lets the OS dismiss the captive
+    // sheet and reopen the originally requested page on its own.
+    //
+    // The button below still offers a manual jump to the originally requested
+    // page when RouterOS provides one. $(link-redirect-esc) is URL-escaped, so
+    // decoding it keeps the value from breaking out of this script.
+    var redirectUrl = '';
+    try {
+      redirectUrl = cleanUrl(unescape('$(link-redirect-esc)'));
+    } catch (error) {
+      redirectUrl = '';
+    }
+
+    var continueBtn = document.getElementById('continueBtn');
+    if (continueBtn && redirectUrl) {
+      continueBtn.setAttribute('href', redirectUrl);
+    }
+  })();
+</script>
+</body>
+</html>

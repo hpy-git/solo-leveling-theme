@@ -1,0 +1,12 @@
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.swp
+*~
+
+# Local tooling
+node_modules/
+.vscode/
+.idea/

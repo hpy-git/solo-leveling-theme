@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-labelledby="gridTitle">
+  <title id="gridTitle">Rune grid texture</title>
+  <g stroke="#ffffff" fill="none">
+    <path d="M0 0h120v120H0z" stroke-width="0.7" opacity="0.35"/>
+    <path d="M60 0v120M0 60h120" stroke-width="0.6" opacity="0.25"/>
+    <path d="M60 18 102 60 60 102 18 60Z" stroke-width="0.8" opacity="0.28"/>
+    <path d="M60 38 82 60 60 82 38 60Z" stroke-width="0.7" opacity="0.22"/>
+    <circle cx="60" cy="60" r="30" stroke-width="0.6" opacity="0.18"/>
+    <path d="M60 6v8M60 106v8M6 60h8M106 60h8" stroke-width="0.8" opacity="0.3"/>
+  </g>
+</svg>

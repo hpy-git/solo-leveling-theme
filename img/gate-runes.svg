@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none" role="img" aria-labelledby="runesTitle">
+  <title id="runesTitle">Gate rune ring</title>
+  <g stroke="#ffffff" fill="none">
+    <circle cx="256" cy="256" r="246" stroke-width="1.2" opacity="0.55"/>
+    <circle cx="256" cy="256" r="232" stroke-width="10" stroke-dasharray="1 13" opacity="0.5"/>
+    <circle cx="256" cy="256" r="198" stroke-width="1" opacity="0.45"/>
+    <circle cx="256" cy="256" r="188" stroke-width="6" stroke-dasharray="2 18" opacity="0.38"/>
+    <circle cx="256" cy="256" r="154" stroke-width="1" opacity="0.25"/>
+    <path d="M256 18v30M256 464v30M18 256h30M464 256h30" stroke-width="1.6" opacity="0.75"/>
+    <path d="M88 88l21 21M403 403l21 21M424 88l-21 21M109 403l-21 21" stroke-width="1.4" opacity="0.6"/>
+    <g stroke-width="1.4" opacity="0.8">
+      <g transform="translate(256 256) rotate(0) translate(0 -214)">
+        <path d="M-9 0 0 -12 9 0 0 12Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(45) translate(0 -214)">
+        <path d="M0 -10 9 6H-9Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(90) translate(0 -214)">
+        <path d="M-9 0 0 -12 9 0 0 12Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(135) translate(0 -214)">
+        <path d="M0 -10 9 6H-9Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(180) translate(0 -214)">
+        <path d="M-9 0 0 -12 9 0 0 12Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(225) translate(0 -214)">
+        <path d="M0 -10 9 6H-9Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(270) translate(0 -214)">
+        <path d="M-9 0 0 -12 9 0 0 12Z"/>
+      </g>
+      <g transform="translate(256 256) rotate(315) translate(0 -214)">
+        <path d="M0 -10 9 6H-9Z"/>
+      </g>
+    </g>
+    <g stroke-width="1.1" opacity="0.55">
+      <path d="M256 58v18M256 436v18M58 256h18M436 256h18"/>
+      <circle cx="256" cy="256" r="120" stroke-dasharray="3 9"/>
+      <circle cx="256" cy="256" r="76" stroke-dasharray="1 7"/>
+    </g>
+  </g>
+</svg>

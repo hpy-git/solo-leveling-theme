@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" role="img" aria-labelledby="sigilTitle">
+  <title id="sigilTitle">Shadow Gate system sigil</title>
+  <defs>
+    <linearGradient id="sigilGrad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7FF4FF"/>
+      <stop offset="0.52" stop-color="#35E0FF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3 56 17v30L32 61 8 47V17L32 3Z" stroke="url(#sigilGrad)" stroke-width="1.4" opacity="0.95"/>
+  <path d="M32 10 49 20v24L32 54 15 44V20L32 10Z" stroke="url(#sigilGrad)" stroke-width="0.9" opacity="0.5"/>
+  <path d="M32 15v34" stroke="url(#sigilGrad)" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M32 21 24.5 28.5 32 36l7.5-7.5L32 21Z" stroke="url(#sigilGrad)" stroke-width="1.2"/>
+  <path d="M18.5 27.5c-4-4-7.2-5.2-11.5-5.2 1 5.2 4 8.4 9.4 10.4M45.5 27.5c4-4 7.2-5.2 11.5-5.2-1 5.2-4 8.4-9.4 10.4" stroke="url(#sigilGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="32" cy="36" r="2.3" fill="#7FF4FF"/>
+  <circle cx="32" cy="36" r="5.2" stroke="#35E0FF" stroke-width="0.8" opacity="0.55"/>
+</svg>

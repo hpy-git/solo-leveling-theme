@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-perf="balanced">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#04060c">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title id="title">Shadow Gate &rsaquo; System Warning</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/perf.css">
+  <script src="js/perf-tier.js"></script>
+  <script src="js/theme-mode.js"></script>
+  <script src="js/theme-motion.js" defer></script>
+  <script src="js/theme-sounds.js" defer></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  function restoreTawkChat() {
+      if (typeof Tawk_API.showWidget === 'function') {
+          Tawk_API.showWidget();
+      }
+  }
+  Tawk_API.onLoad = restoreTawkChat;
+  Tawk_API.onChatHidden = restoreTawkChat;
+  Tawk_API.onChatMinimized = restoreTawkChat;
+  Tawk_API.onChatClosed = restoreTawkChat;
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69ac11c70c100a1c36455660/1k6f5rbon';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  window.addEventListener('pageshow', restoreTawkChat);
+  document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) restoreTawkChat();
+  });
+  </script>
+  <!--End of Tawk.to Script-->
+</head>
+<body>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__veil"></div>
+  <div class="scene__grid"></div>
+  <div class="scene__gate">
+    <div class="gate">
+      <span class="gate__ring gate__ring--1"></span>
+      <span class="gate__ring gate__ring--2"></span>
+      <span class="gate__ring gate__ring--3"></span>
+      <span class="gate__ring gate__ring--4"></span>
+      <span class="gate__ring gate__ring--5"></span>
+      <span class="gate__runes"></span>
+      <span class="gate__core"></span>
+    </div>
+  </div>
+  <div class="scene__hunter"></div>
+  <div class="scene__scan"></div>
+  <div class="scene__sparks">
+    <span class="scene__spark" style="left:14%;--s:1"></span>
+    <span class="scene__spark" style="left:31%;--s:3"></span>
+    <span class="scene__spark" style="left:57%;--s:2"></span>
+    <span class="scene__spark" style="left:76%;--s:0"></span>
+    <span class="scene__spark" style="left:88%;--s:4"></span>
+  </div>
+  <div class="scene__shadows">
+    <span class="scene__shadow" style="left:20%;--s:0"></span>
+    <span class="scene__shadow" style="left:54%;--s:2"></span>
+    <span class="scene__shadow" style="left:82%;--s:1"></span>
+  </div>
+</div>
+
+<main class="portal portal--center">
+  <div class="stage stage--center">
+    <header class="topbar">
+      <div class="brand">
+        <button class="brand__mark" type="button" id="monarchTrigger"
+                aria-label="Shadow Gate sigil. Tap five times to unlock Monarch Mode.">
+          <img src="img/system-sigil.svg" width="34" height="34" alt="">
+        </button>
+        <div class="brand__text">
+          <span class="brand__name">SHADOW GATE</span>
+          <span class="brand__sub">HUNTER NETWORK // ANOMALY</span>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__status">
+          <i class="status-dot" aria-hidden="true" style="background: var(--red); box-shadow: 0 0 9px var(--red);"></i>
+          <span class="status-text">SYSTEM WARNING</span>
+        </span>
+      </div>
+    </header>
+
+    <section class="sys-window sys-window--danger" aria-labelledby="error-title">
+      <div class="sys-bar">
+        <span class="sys-bar__title"><i class="sys-bar__dot" aria-hidden="true"></i>System // Warning</span>
+        <span class="sys-bar__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="sys-body">
+        <div class="outcome reveal">
+          <span class="outcome__seal outcome__seal--error">
+            <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="var(--danger-ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Warning">
+              <path d="M12 3l9 16H3L12 3z"></path>
+              <path d="M12 9v4M12 16.5v.01"></path>
+            </svg>
+          </span>
+
+          <p class="eyebrow">Anomaly detected</p>
+          <h1 class="sys-title title--sm" id="error-title"><span class="title__fill">System Warning</span></h1>
+          <p class="sys-sub">The Gate rejected the request. Review the signal below and try again.</p>
+
+          <div class="alert" role="alert">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v5M12 16.5v.01"></path>
+            </svg>
+            <span>$(error)</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="$(link-login)">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5"></path>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span data-label>Return to the Gate</span>
+            </a>
+          </div>
+        </div>
+
+        <footer class="footer reveal" style="--i:1">
+          <strong>SHADOW GATE</strong> &middot; mTikOps<br>
+          <span>SYSTEM v2.0 // &copy; 2023&ndash;2026</span>
+          <div class="toggle-row">
+            <button class="toggle" type="button" data-toggle-theme aria-pressed="false" aria-label="Switch to Awakened light mode">
+              <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+              </svg>
+              <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.8A8.5 8.5 0 1111.2 3a6.5 6.5 0 009.8 9.8z"></path>
+              </svg>
+              <span data-label>System</span>
+            </button>
+            <button class="toggle" type="button" data-toggle-sfx aria-pressed="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10v4h3l4 3V7L7 10z"></path>
+                <path d="M16 9a4 4 0 010 6"></path>
+              </svg>
+              <span data-label>SFX ON</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+
+      <div class="sys-foot">
+        <span>FAULT // SIGNAL LOST</span>
+        <span>RETRY AVAILABLE</span>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script type="text/javascript">
+  (function () {
+    'use strict';
+    document.title = "$(hostname) > warning";
+
+    function errorTone() {
+      try {
+        if (window.ShadowGateSounds && typeof window.ShadowGateSounds.play === 'function') {
+          window.ShadowGateSounds.play('error');
+        }
+      } catch (error) { /* decoration only */ }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        window.setTimeout(errorTone, 240);
+      });
+    } else {
+      window.setTimeout(errorTone, 240);
+    }
+  })();
+</script>
+</body>
+</html>

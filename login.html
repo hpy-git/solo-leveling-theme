@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" data-perf="balanced">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#04060c">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title id="title">Shadow Gate &rsaquo; Gate Access</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/perf.css">
+  <script src="js/perf-tier.js"></script>
+  <script src="js/theme-mode.js"></script>
+  <script src="js/theme-motion.js" defer></script>
+  <script src="js/theme-sounds.js" defer></script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  function restoreTawkChat() {
+      if (typeof Tawk_API.showWidget === 'function') {
+          Tawk_API.showWidget();
+      }
+  }
+  Tawk_API.onLoad = restoreTawkChat;
+  Tawk_API.onChatHidden = restoreTawkChat;
+  Tawk_API.onChatMinimized = restoreTawkChat;
+  Tawk_API.onChatClosed = restoreTawkChat;
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69ac11c70c100a1c36455660/1k6f5rbon';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  window.addEventListener('pageshow', restoreTawkChat);
+  document.addEventListener('visibilitychange', function() {
+      if (!document.hidden) restoreTawkChat();
+  });
+  </script>
+  <!--End of Tawk.to Script-->
+</head>
+<body>
+$(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-orig)" />
+    <input type="hidden" name="popup" value="true" />
+  </form>
+  <script type="text/javascript" src="md5.js"></script>
+$(endif)
+
+<audio id="backgroundMusic" loop preload="none" style="display:none">
+  <source src="audio/theme.mp3" type="audio/mpeg">
+  <source src="audio/tap.mp3" type="audio/mpeg">
+</audio>
+
+<div class="scene" aria-hidden="true">
+  <div class="scene__veil"></div>
+  <div class="scene__grid"></div>
+  <div class="scene__gate">
+    <div class="gate">
+      <span class="gate__ring gate__ring--1"></span>
+      <span class="gate__ring gate__ring--2"></span>
+      <span class="gate__ring gate__ring--3"></span>
+      <span class="gate__ring gate__ring--4"></span>
+      <span class="gate__ring gate__ring--5"></span>
+      <span class="gate__runes"></span>
+      <span class="gate__core"></span>
+    </div>
+  </div>
+  <div class="scene__hunter"></div>
+  <div class="scene__scan"></div>
+  <div class="scene__sparks">
+    <span class="scene__spark" style="left:12%;--s:1"></span>
+    <span class="scene__spark" style="left:31%;--s:3"></span>
+    <span class="scene__spark" style="left:54%;--s:0"></span>
+    <span class="scene__spark" style="left:73%;--s:2"></span>
+    <span class="scene__spark" style="left:88%;--s:4"></span>
+  </div>
+  <div class="scene__shadows">
+    <span class="scene__shadow" style="left:16%;--s:0"></span>
+    <span class="scene__shadow" style="left:42%;--s:2"></span>
+    <span class="scene__shadow" style="left:68%;--s:1"></span>
+    <span class="scene__shadow" style="left:86%;--s:3"></span>
+  </div>
+</div>
+
+<a class="skip-link" href="#signin">Skip to authentication</a>
+
+<main class="portal">
+  <div class="stage">
+    <header class="topbar">
+      <div class="brand">
+        <button class="brand__mark" type="button" id="monarchTrigger"
+                aria-label="Shadow Gate sigil. Tap five times to unlock Monarch Mode.">
+          <img src="img/system-sigil.svg" width="34" height="34" alt="">
+        </button>
+        <div class="brand__text">
+          <span class="brand__name">SHADOW GATE</span>
+          <span class="brand__sub">HUNTER NETWORK // SYS v2.0</span>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__status">
+          <i class="status-dot" aria-hidden="true"></i>
+          <span class="status-text">SYSTEM ONLINE</span>
+        </span>
+      </div>
+    </header>
+
+    <section class="stage__hero" aria-hidden="true">
+      <p class="hero__label">// Gate 07 &mdash; A-Rank Breach</p>
+      <h2 class="hero__title">Shadow<br>Gate</h2>
+      <p class="hero__rule">Mana stable &middot; Awaiting hunter</p>
+      <p class="hero__meta">
+        Hunter Association relay // encrypted channel<br>
+        Present a valid gate key or hunter ID to begin.
+      </p>
+    </section>
+
+    <section class="sys-window sys-window--login" aria-labelledby="login-title">
+      <div class="sys-bar">
+        <span class="sys-bar__title"><i class="sys-bar__dot" aria-hidden="true"></i>System // Authentication</span>
+        <span class="sys-bar__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="sys-body">
+        <p class="sys-kicker">Notification</p>
+        <h1 class="sys-title" id="login-title">Welcome, <span class="title__fill">Hunter</span>.</h1>
+        <p class="sys-sub" id="infologin">The System has detected your presence. Present your credentials to open the Gate.</p>
+
+        <div class="tabs reveal" data-tabs role="tablist" aria-label="Authentication method" style="--i:1">
+          <span class="tabs__indicator" aria-hidden="true"></span>
+          <button class="tabs__btn is-active" id="tabVoucher" type="button" role="tab"
+                  aria-selected="true" aria-controls="paneVoucher" data-tab="paneVoucher" tabindex="0">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="8" cy="12" r="4"></circle>
+              <path d="M12 12h9M18 12v4M15 12v3"></path>
+            </svg>
+            Gate Key
+          </button>
+          <button class="tabs__btn" id="tabMember" type="button" role="tab"
+                  aria-selected="false" aria-controls="paneMember" data-tab="paneMember" tabindex="-1">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21v-2a5 5 0 015-5h6a5 5 0 015 5v2"></path>
+            </svg>
+            Hunter ID
+          </button>
+        </div>
+
+    <form autocomplete="off" name="login" id="signin" action="$(link-login-only)" method="post" $(if chap-id) onsubmit="return doLogin()" $(endif)>
+      <input type="hidden" name="dst" value="$(link-orig)" />
+      <input type="hidden" name="popup" value="true" />
+
+          <div id="paneVoucher" data-panel="paneVoucher" role="tabpanel" aria-labelledby="tabVoucher">
+            <div class="field-group reveal" style="--i:2">
+              <label class="field-label" for="username">Gate Key <span class="eyebrow">Voucher</span></label>
+              <div class="field-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="8" cy="12" r="4"></circle>
+                  <path d="M12 12h9M18 12v4M15 12v3"></path>
+                </svg>
+                <input class="field field--icon username" id="username" name="username" type="text"
+                       value="$(username)" placeholder="Enter access code"
+                       aria-describedby="infologin login-error"
+                       autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false"
+                       inputmode="text" enterkeyhint="go" required />
+              </div>
+            </div>
+          </div>
+
+          <div id="paneMember" data-panel="paneMember" role="tabpanel" aria-labelledby="tabMember" hidden>
+            <div class="field-group">
+              <label class="field-label" for="memberUsername">Hunter ID <span class="eyebrow">Username</span></label>
+              <div class="field-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 21v-2a5 5 0 015-5h6a5 5 0 015 5v2"></path>
+                </svg>
+                <input class="field field--icon" id="memberUsername" type="text" placeholder="Username"
+                       autocapitalize="none" autocomplete="username" autocorrect="off" spellcheck="false" />
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="memberPassword">Secret Phrase <span class="eyebrow">Password</span></label>
+              <div class="field-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2"></rect>
+                  <path d="M8 10V7a4 4 0 018 0v3"></path>
+                </svg>
+                <input class="field field--icon field--has-action" id="memberPassword" type="password" placeholder="Password"
+                       autocomplete="current-password" />
+                <button class="field-action" type="button" data-toggle-password data-target="memberPassword"
+                        aria-label="Show password" aria-pressed="false">
+                  <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z"></path>
+                    <circle cx="12" cy="12" r="2.6"></circle>
+                  </svg>
+                  <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 3l18 18M10.6 6.2A10.9 10.9 0 0112 6c6.4 0 10 6 10 6a18.5 18.5 0 01-3.2 3.8M6.1 6.1A18.4 18.4 0 002 12s3.6 6 10 6a10.6 10.6 0 004.1-.8"></path>
+                    <path d="M9.9 9.9a3 3 0 004.2 4.2"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <input class="password" name="password" type="hidden" />
+
+          $(if error)
+          <div class="alert" id="login-error" role="alert">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 8v5M12 16.5v.01"></path>
+            </svg>
+            <span>$(error)</span>
+          </div>
+          $(endif)
+
+          <div class="actions reveal" style="--i:3">
+            <button class="btn btn--arise" id="connectButton" type="submit">
+              <span class="btn__main" data-label>ARISE</span>
+              <span class="btn__sub">CONNECT TO THE NETWORK</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </button>
+
+            <div class="actions__row">
+              <button class="btn btn--ghost" type="button" id="questBoardBtn" data-open-sheet="plansSheet" aria-haspopup="dialog">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 5h13a3 3 0 013 3v11H7a3 3 0 01-3-3z"></path>
+                  <path d="M4 16h16"></path>
+                </svg>
+                Quest Board
+              </button>
+              <button class="btn btn--ghost" type="button" id="archiveBtn" data-open-sheet="planInfoSheet" aria-haspopup="dialog">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 19.5V5a2 2 0 012-2h13v18H6a2 2 0 01-2-1.5z"></path>
+                  <path d="M8 7h7M8 11h7"></path>
+                </svg>
+                Archive
+              </button>
+            </div>
+
+            $(if trial == 'yes')
+            <button class="btn btn--quiet" type="button" id="dailyQuestBtn" data-open-sheet="trialSheet" aria-haspopup="dialog">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+              Daily Quest &mdash; 1 hour free
+            </button>
+            $(endif)
+          </div>
+        </form>
+
+        <div class="system-log" id="systemLog" role="status" aria-live="polite">AWAITING AUTHENTICATION&hellip;</div>
+
+        <footer class="footer reveal" style="--i:4">
+          <strong>SHADOW GATE</strong> &middot; mTikOps<br>
+          <span>SYSTEM v2.0 // &copy; 2023&ndash;2026</span>
+          <div class="toggle-row">
+            <button class="toggle" type="button" data-toggle-theme aria-pressed="false" aria-label="Switch to Awakened light mode">
+              <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+              </svg>
+              <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.8A8.5 8.5 0 1111.2 3a6.5 6.5 0 009.8 9.8z"></path>
+              </svg>
+              <span data-label>System</span>
+            </button>
+            <button class="toggle sound-toggle" id="soundToggle" type="button" data-toggle-sfx aria-pressed="true" aria-label="Toggle sound effects">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 10v4h3l4 3V7L7 10z"></path>
+                <path d="M16 9a4 4 0 010 6"></path>
+              </svg>
+              <span data-label>SFX ON</span>
+            </button>
+            <button class="toggle sound-toggle" id="musicToggle" type="button" data-toggle-ambient aria-pressed="true" aria-label="Toggle ambient music">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <path d="M3 12h2l2-5 3 10 3-13 3 15 2 7h3"></path>
+              </svg>
+              <span data-label>MANA ON</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+
+      <div class="sys-foot">
+        <span>SYSTEM v2.0 // mTikOps</span>
+        <span>GATE 07 // MANA 98%</span>
+      </div>
+    </section>
+  </div>
+</main>
+
+<dialog id="plansSheet" aria-labelledby="plansTitle">
+  <div class="sheet__head">
+    <h2 id="plansTitle">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 6l9-3 9 3v12l-9 3-9-3z"></path>
+        <path d="M3 6l9 3 9-3M12 9v12"></path>
+      </svg>
+      Quest Board
+    </h2>
+    <button class="icon-btn" type="button" data-close-sheet aria-label="Close quest board">&times;</button>
+  </div>
+
+  <div class="sheet__body">
+    <p class="sheet__lead">Choose a hunter rank. Prepaid leases expire on schedule; postpaid campaigns carry your own credentials and several devices.</p>
+
+    <div class="tabs" data-tabs role="tablist" aria-label="Quest type">
+      <span class="tabs__indicator" aria-hidden="true"></span>
+      <button class="tabs__btn is-active" id="tabPrepaid" type="button" role="tab"
+              aria-selected="true" aria-controls="prepaidPanel" data-tab="prepaidPanel" tabindex="0">Prepaid</button>
+      <button class="tabs__btn" id="tabPostpaid" type="button" role="tab"
+              aria-selected="false" aria-controls="postpaidPanel" data-tab="postpaidPanel" tabindex="-1">Postpaid</button>
+    </div>
+
+    <section id="prepaidPanel" data-panel="prepaidPanel" role="tabpanel" aria-labelledby="tabPrepaid">
+      <ul class="rank-grid">
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--e">E</span>
+            <div class="rank-card__body">
+              <h3>Day Pass</h3>
+              <p>1 day &middot; 1 device</p>
+            </div>
+            <span class="rank-card__price">&#8369;10</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--d">D</span>
+            <div class="rank-card__body">
+              <h3>Week Pass</h3>
+              <p>7 days &middot; 1 device</p>
+            </div>
+            <span class="rank-card__price">&#8369;70</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--c">C</span>
+            <div class="rank-card__body">
+              <h3>Combo Pass</h3>
+              <p>14 days &middot; 1 device</p>
+            </div>
+            <span class="rank-card__price">&#8369;140</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--b">B</span>
+            <div class="rank-card__body">
+              <h3>Month Pass</h3>
+              <p>30 days &middot; 1 device</p>
+            </div>
+            <span class="rank-card__price">&#8369;280</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="postpaidPanel" data-panel="postpaidPanel" role="tabpanel" aria-labelledby="tabPostpaid" hidden>
+      <ul class="rank-grid">
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--a">A</span>
+            <div class="rank-card__body">
+              <h3>Connect Plus</h3>
+              <p>30 days &middot; 2 devices &middot; 5 Mbps (10 weekends)</p>
+            </div>
+            <span class="rank-card__price">&#8369;300</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static">
+            <span class="rank-badge rank-badge--a">A</span>
+            <div class="rank-card__body">
+              <h3>Connect Pro</h3>
+              <p>30 days &middot; 4 devices &middot; 10 Mbps (15 weekends)</p>
+            </div>
+            <span class="rank-card__price">&#8369;500</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static rank-card--featured">
+            <span class="rank-badge rank-badge--s">S</span>
+            <div class="rank-card__body">
+              <h3>Connect Max</h3>
+              <p>30 days &middot; 6 devices &middot; 15 Mbps (20 weekends)</p>
+            </div>
+            <span class="rank-card__price">&#8369;700</span>
+          </div>
+        </li>
+        <li>
+          <div class="rank-card rank-card--static rank-card--featured">
+            <span class="rank-badge rank-badge--s">S</span>
+            <div class="rank-card__body">
+              <h3>Connect Prime</h3>
+              <p>30 days &middot; 10 devices &middot; 25 Mbps (50 weekends)</p>
+            </div>
+            <span class="rank-card__price">&#8369;800</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="buy-strip">
+      <p>Need a gate key now?</p>
+      <button class="btn btn--quiet" type="button" id="merchantBtn" data-open-sheet="buySheet">Merchant Guild &rsaquo;</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="planInfoSheet" aria-labelledby="planInfoTitle">
+  <div class="sheet__head">
+    <h2 id="planInfoTitle">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 16v-4M12 8v.01"></path>
+      </svg>
+      System Archive
+    </h2>
+    <button class="icon-btn" type="button" data-close-sheet aria-label="Close system archive">&times;</button>
+  </div>
+
+  <div class="sheet__body">
+    <div class="info-nav" role="group" aria-label="Filter archive">
+      <button class="info-nav__btn is-active" type="button" data-info-filter="all">All ranks</button>
+      <button class="info-nav__btn" type="button" data-info-filter="prepaid">Prepaid</button>
+      <button class="info-nav__btn" type="button" data-info-filter="postpaid">Postpaid</button>
+    </div>
+
+    <article class="info-card" id="infoPrepaid">
+      <div class="info-card__head">
+        <span class="badge badge--prepaid">Short lease</span>
+        <h3>Prepaid passes</h3>
+        <span class="device-tag">1 device</span>
+      </div>
+      <p class="info-card__summary">Pay-as-you-go access for a single device. The lease expires exactly when the paid time runs out.</p>
+      <ul class="feature-list">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>E to B rank</strong><span>Choose 1, 7, 14 or 30 days. No automatic renewal.</span></div>
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>One device at a time</strong><span>Built for a phone, tablet or laptop. Do not share the key.</span></div>
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>No commitment</strong><span>Perfect for a short visit or a quick dungeon run.</span></div>
+        </li>
+      </ul>
+    </article>
+
+    <article class="info-card" id="infoPostpaid">
+      <div class="info-card__head">
+        <span class="badge badge--postpaid">Long campaign</span>
+        <h3>Postpaid plans</h3>
+        <span class="device-tag">Multi-device</span>
+      </div>
+      <p class="info-card__summary">A dedicated voucher for a whole party, with a speed tier and device limit for each plan.</p>
+      <ul class="feature-list">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>A to S rank</strong><span>One voucher issued for your service, valid for 30 days.</span></div>
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>2 to 10 devices</strong><span>Share the connection with your party under one plan.</span></div>
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+          <div><strong>Weekend mana surge</strong><span>Speed tier doubles on weekends, up to 50 Mbps.</span></div>
+        </li>
+      </ul>
+    </article>
+
+    <div class="compare-wrap">
+      <h4 class="compare-title">Key differences</h4>
+      <div class="compare-table">
+        <div class="compare-row compare-row--head">
+          <span>Feature</span><span>Prepaid</span><span>Postpaid</span>
+        </div>
+        <div class="compare-row">
+          <span>Duration</span><span>Short lease</span><span class="is-accent">30-day campaign</span>
+        </div>
+        <div class="compare-row">
+          <span>Devices</span><span>1 device</span><span class="is-accent">2 to 10 devices</span>
+        </div>
+        <div class="compare-row">
+          <span>Voucher</span><span>Shared code</span><span class="is-accent">Dedicated</span>
+        </div>
+        <div class="compare-row">
+          <span>Speed</span><span>Fixed</span><span class="is-accent">Tiered</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sheet__actions sheet__actions--single">
+      <button class="btn btn--primary" type="button" data-close-sheet>Return to the Gate</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="buySheet" aria-labelledby="buyTitle">
+  <div class="sheet__head">
+    <h2 id="buyTitle">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M11 4H5a1 1 0 00-1 1v6l10 10 7-7L11 4z"></path>
+        <path d="M8 8v.01"></path>
+      </svg>
+      Merchant Guild
+    </h2>
+    <button class="icon-btn" type="button" data-close-sheet aria-label="Close merchant guild">&times;</button>
+  </div>
+
+  <div class="sheet__body">
+    <div class="purchase-card">
+      <span class="purchase-badge">Official hotline</span>
+      <p class="purchase-intro">Call or text the Guild and a handler will send your gate key right away.</p>
+
+      <div class="phone-box">
+        <span class="phone-number" id="hotlineNumber">09626606116</span>
+        <button class="copy-btn" type="button" data-copy-target="hotlineNumber">Copy</button>
+      </div>
+
+      <div class="contact-grid">
+        <a class="btn btn--primary" href="tel:09626606116">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"></path>
+          </svg>
+          Call
+        </a>
+        <a class="btn btn--ghost" href="sms:09626606116?body=Hi,%20I%20would%20like%20to%20buy%20a%20Wi-Fi%20voucher.">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+          </svg>
+          Text
+        </a>
+      </div>
+
+      <div class="steps">
+        <h4>Open the Gate in three steps</h4>
+        <ol>
+          <li><strong>Pick a rank</strong> from the Quest Board.</li>
+          <li><strong>Contact the Guild</strong> on <strong>09626606116</strong> with your plan and payment method (GCash, Maya or cash).</li>
+          <li><strong>Receive and connect</strong> &mdash; enter the key above and tap <em>ARISE</em>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="sheet__actions sheet__actions--single">
+      <button class="btn btn--primary" type="button" data-close-sheet>Back to authentication</button>
+    </div>
+  </div>
+</dialog>
+
+$(if trial == 'yes')
+<dialog id="trialSheet" aria-labelledby="trialTitle">
+  <div class="sheet__head">
+    <h2 id="trialTitle">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 7v5l3 2"></path>
+      </svg>
+      Daily Quest
+    </h2>
+    <button class="icon-btn" type="button" data-close-sheet aria-label="Close daily quest">&times;</button>
+  </div>
+
+  <div class="sheet__body">
+    <p class="confirm">1H</p>
+    <p class="confirm-copy">
+      The daily quest grants <strong>1 hour</strong> of access, one device only.
+      Confirm to enter the Gate now.
+    </p>
+    <div class="sheet__actions">
+      <button class="btn btn--ghost" type="button" data-close-sheet>Not yet</button>
+      <button class="btn btn--primary" type="button" data-sound="confirm"
+              onclick="location.href='$(link-login-only)?dst=$(link-orig-esc)&username=T-$(mac-esc)'">
+        Enter Gate
+      </button>
+    </div>
+  </div>
+</dialog>
+$(endif)
+
+<script type="text/javascript">
+  (function () {
+    'use strict';
+
+    document.title = "$(hostname) > gate access";
+
+    var form = document.getElementById('signin');
+    var accessCodeInput = document.getElementById('username');
+    var passwordField = form.elements.password;
+    var memberUserInput = document.getElementById('memberUsername');
+    var memberPassInput = document.getElementById('memberPassword');
+    var connectButton = document.getElementById('connectButton');
+    var connectLabel = connectButton ? connectButton.querySelector('[data-label]') : null;
+    var info = document.getElementById('infologin');
+    var serverError = document.getElementById('login-error');
+    var mode = 'voucher';
+    var voucherValue = '';
+
+    var COPY = {
+      voucher: 'The System has detected your presence. Present your gate key to open the Gate.',
+      member: 'Transmit your hunter ID and secret phrase. The System will verify your signature.'
+    };
+
+    function trim(value) {
+      return String(value == null ? '' : value).replace(/^\s+|\s+$/g, '');
+    }
+
+    function syncPassword() {
+      if (mode === 'member') {
+        accessCodeInput.value = trim(memberUserInput.value);
+        passwordField.value = memberPassInput.value;
+      } else {
+        passwordField.value = trim(accessCodeInput.value);
+      }
+    }
+
+    function hideErrors() {
+      if (serverError) serverError.hidden = true;
+    }
+
+    function setMode(nextMode, shouldFocus) {
+      // Keep the gate key the hunter typed when switching tabs.
+      if (mode === 'voucher') voucherValue = accessCodeInput.value;
+
+      mode = nextMode;
+      var isMember = mode === 'member';
+
+      if (!isMember) accessCodeInput.value = voucherValue;
+
+      accessCodeInput.required = !isMember;
+      if (info) info.textContent = COPY[mode] || COPY.voucher;
+
+      if (shouldFocus) {
+        if (isMember) memberUserInput.focus();
+        else accessCodeInput.focus();
+      }
+
+      syncPassword();
+    }
+
+    accessCodeInput.addEventListener('input', syncPassword);
+    memberUserInput.addEventListener('input', syncPassword);
+    memberPassInput.addEventListener('input', syncPassword);
+
+    [accessCodeInput, memberUserInput, memberPassInput].forEach(function (input) {
+      input.addEventListener('input', hideErrors);
+    });
+
+    var tabs = document.querySelector('[data-tabs]');
+    if (tabs) {
+      tabs.addEventListener('tabchange', function (event) {
+        var selected = event.detail && event.detail.button;
+        if (!selected) return;
+        setMode(selected.getAttribute('data-tab') === 'paneMember' ? 'member' : 'voucher', true);
+      });
+    }
+
+    function markInvalid(field) {
+      if (!field) return;
+      field.setAttribute('aria-invalid', 'true');
+      field.classList.add('shake');
+      field.focus();
+      window.setTimeout(function () {
+        field.classList.remove('shake');
+        field.removeAttribute('aria-invalid');
+      }, 900);
+    }
+
+    function setConnecting() {
+      form.setAttribute('data-state', 'connecting');
+      form.setAttribute('aria-busy', 'true');
+      if (connectLabel) connectLabel.textContent = 'CONNECTING\u2026';
+      if (connectButton) connectButton.disabled = true;
+      var log = document.getElementById('systemLog');
+      if (log) log.textContent = 'VERIFYING CREDENTIALS\u2026';
+    }
+
+    window.doLogin = function () {
+      if (form.getAttribute('data-state') === 'connecting') return false;
+
+      syncPassword();
+
+      if (!trim(accessCodeInput.value)) {
+        markInvalid(mode === 'member' ? memberUserInput : accessCodeInput);
+        return false;
+      }
+
+      if (mode === 'member' && !trim(memberPassInput.value)) {
+        markInvalid(memberPassInput);
+        return false;
+      }
+
+      var chapId = '$(chap-id)';
+      var chapChallenge = '$(chap-challenge)';
+
+      if (window.document.sendin && window.hexMD5 && chapId) {
+        document.sendin.username.value = trim(accessCodeInput.value);
+        document.sendin.password.value = hexMD5(chapId + passwordField.value + chapChallenge);
+        setConnecting();
+        window.setTimeout(function () {
+          document.sendin.submit();
+        }, 80);
+        return false;
+      }
+
+      setConnecting();
+      return true;
+    };
+
+    form.addEventListener('submit', function (event) {
+      // doLogin() (CHAP) may have already cancelled and submitted the hidden form.
+      if (event.defaultPrevented || form.getAttribute('data-state') === 'connecting') return;
+      syncPassword();
+
+      if (!trim(accessCodeInput.value)) {
+        event.preventDefault();
+        markInvalid(mode === 'member' ? memberUserInput : accessCodeInput);
+        return;
+      }
+
+      if (mode === 'member' && !trim(memberPassInput.value)) {
+        event.preventDefault();
+        markInvalid(memberPassInput);
+        return;
+      }
+
+      setConnecting();
+    });
+
+    /* Archive filter ------------------------------------------------------ */
+
+    var filterButtons = document.querySelectorAll('[data-info-filter]');
+    var prepaidCard = document.getElementById('infoPrepaid');
+    var postpaidCard = document.getElementById('infoPostpaid');
+
+    function showInfoView(view) {
+      Array.prototype.forEach.call(filterButtons, function (button) {
+        button.classList.toggle('is-active', button.getAttribute('data-info-filter') === view);
+      });
+
+      function apply(card, visible, highlighted) {
+        if (!card) return;
+        card.style.display = visible ? '' : 'none';
+        card.classList.toggle('is-highlighted', highlighted);
+      }
+
+      apply(prepaidCard, view !== 'postpaid', view === 'prepaid');
+      apply(postpaidCard, view !== 'prepaid', view === 'postpaid');
+    }
+
+    Array.prototype.forEach.call(filterButtons, function (button) {
+      button.addEventListener('click', function () {
+        showInfoView(button.getAttribute('data-info-filter'));
+      });
+    });
+
+    showInfoView('all');
+    setMode('voucher', false);
+  })();
+</script>
+</body>
+</html>

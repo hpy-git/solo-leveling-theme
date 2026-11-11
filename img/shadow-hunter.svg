@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="hunterTitle">
+  <title id="hunterTitle">Hooded hunter silhouette</title>
+  <path fill="#ffffff" d="M256 18c-45 0-78 35-86 88-6 39 4 72 25 95-41 19-70 56-80 107-8 43-14 90-18 144h318c-4-54-10-101-18-144-10-51-39-88-80-107 21-23 31-56 25-95-8-53-41-88-86-88Zm0 34c27 0 46 22 51 60 4 30-3 53-18 69-9 10-21 16-33 16s-24-6-33-16c-15-16-22-39-18-69 5-38 24-60 51-60Z"/>
+  <path fill="#ffffff" opacity="0.55" d="M88 300c-20 38-32 80-38 126h50c7-54 19-96 34-126H88Zm336 0c20 38 32 80 38 126h-50c-7-54-19-96-34-126h46Z"/>
+</svg>
